@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleSheet.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Gato</title>
+</head>
+<body>
+    <section id="Cont" class="Contenedor">
+        <div id="Caja1" class="Caja"></div>
+        <div id="Caja2" class="Caja"></div>
+        <div id="Caja3" class="Caja"></div>
+        <div id="Caja4" class="Caja"></div>
+        <div id="Caja5" class="Caja"></div>
+        <div id="Caja6" class="Caja"></div>
+        <div id="Caja7" class="Caja"></div>
+        <div id="Caja8" class="Caja"></div>
+        <div id="Caja9" class="Caja"></div>
+        <div id="Caja10"> </div>
+        <div id="Caja11"> </div>
+        <div id="Caja12"> </div>
+        <div id="Caja13"> </div>
+        <div id="Caja14"> <button id="btnLimpiar" type="button">Limpiar</button></div>
+        <div id="Caja15"> </div>
+    </section>
+
+    <script>
+
+    window.onload=function(){
+        let turno = 0;
+        let tablero = [];
+        let contador = 0;
+
+        const btnPuslsado = (e, i) => {
+            
+            if (document.getElementById(e.target.id).innerText==""){
+                turno++;
+                const btn = e.target;
+                const valor = turno % 2 ? 'X' : 'O';
+                document.getElementById(e.target.id).innerText = valor;
+                tablero[i] = valor;
+
+
+
+                if(tablero[0] == tablero[1] && tablero[0] == tablero[2] && tablero[0]){
+                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                }else if(tablero[3] == tablero[4] && tablero[3] == tablero[5] && tablero[3]){
+                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                }else if(tablero[6] == tablero[7] && tablero[6] == tablero[8] && tablero[6]){
+                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                }else if(tablero[0] == tablero[3] && tablero[0] == tablero[6] && tablero[0]){
+                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                }else if(tablero[1] == tablero[4] && tablero[1] == tablero[7] && tablero[1]){
+                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                }else if(tablero[2] == tablero[5] && tablero[2] == tablero[8] && tablero[2]){
+                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                }else if(tablero[0] == tablero[4] && tablero[0] == tablero[8] && tablero[0]){
+                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                }else if(tablero[2] == tablero[4] && tablero[2] == tablero[6] && tablero[2]){
+                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                }
+/* 
+                if(turno==9){
+                    let cajas = document.getElementsByClassName("Caja");
+                    for(const element of cajas){
+                        console.log(element.textContent);
+                        if(element.textContent != ""){
+                            document.getElementById("Caja11").innerText=("Empate");
+                        }
+                    }
+                }
+                console.log(turno); */
+            }
+        }
+
+
+
+        document.querySelectorAll('div').forEach(
+            (obj, i) => obj.addEventListener("click", (e) => btnPuslsado(e, i)));
+
+
+        document.getElementById("btnLimpiar").addEventListener("click",function(){
+            let cajas = document.getElementsByClassName("Caja");
+            tablero = [];
+            for(const element of cajas){
+                    element.innerText="";
+                    document.getElementById("Caja11").innerText="";
+                    turno=0;
+            }
+        })
+
+    }
+
+    </script>
+
+</body>
+</html>

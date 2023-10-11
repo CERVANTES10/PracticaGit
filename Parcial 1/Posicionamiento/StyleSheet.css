@@ -1,0 +1,31 @@
+.Caja{
+
+    background-color: rgb(1, 147, 65);
+    color: black;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+#Caja2{
+    position: relative;
+    left: 200px;
+}
+
+#Caja3{
+    position: absolute;
+    left: 410px;
+}
+
+#Caja4{
+    position: fixed;
+    left: 615px;
+}
+
+#Caja5{
+    position: sticky;
+    left: 830px;
+    top: 5px;
+}

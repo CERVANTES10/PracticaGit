@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index2</title>
+    <style>
+        /* Ejemplo 2 */
+        button{
+            margin: 25px;
+            display: flex;
+            flex-direction: column;
+            width: 95px;
+            height: 100px;
+            border: 0.1px;
+            background: transparent;
+            gap: 1.5rem;
+            transition: all .7s;
+        }
+
+        button > div{
+            background: black;
+            height: 5px;
+            width: 100%;
+            border-radius: 5px;
+            transition: all .7s;
+            transform-origin: left;
+        }
+
+        button:hover{
+            transition: all .7s;
+            transform: translateX(50vw);
+        }
+
+        button:hover div:first-child{
+            transform: rotate(45deg);
+        }
+
+        button:hover div:nth-child(2){
+            opacity: 0;
+        }
+
+        button:hover div:last-child{
+            transform: rotate(-45deg);
+        }
+
+        /* Ejemplo 1 */
+        .Contenedor{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 50vh;
+            width: 100vw;
+            display: grid;
+            background-color: gainsboro;
+            grid-template-columns: 200px 200px;
+            grid-template-rows: 200px 200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Caja{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            color: gainsboro;
+            text-align: center;
+            border: 1px solid black;
+        }   
+
+        #Rotate:hover{
+            transition: all .7s;
+            transform: rotate(45deg);
+        }
+
+        #rotate-translate:hover{
+            transition: all .5s;
+            transform: rotate(45deg) translateX(180px);
+        }
+
+        #translate-rotate:hover{
+            transition: all .5s;
+            transform: translateX(180px) rotate(45deg);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="Contenedor">
+        <div class="Caja" id="Normal">Normal</div>
+        <div class="Caja" id="Rotate">Rotated</div>
+        <div class="Caja" id="rotate-translate">Rotated + Translated</div>
+        <div class="Caja" id="translate-rotate">Translated + Rotated</div>
+    </div>
+    
+
+
+    
+    <section class="Ejemplo1">
+        <button>
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+    </section>
+
+</body>
+</html>

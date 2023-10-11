@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Contenedor{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    background-color: blue;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    justify-content: center;
+    align-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.Caja{
+    /*width: 100px;*/
+    /*height: 100px;*/
+    background-color: brown;
+    border: 1px solid black;
+}
+
+#Caja1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="Contenedor">
+        <div class="Caja" id="Caja1">CAJA 1</div>
+        <div class="Caja" id="Caja2">CAJA 2</div>
+        <div class="Caja" id="Caja3">CAJA 3</div>
+        <div class="Caja" id="Caja4">CAJA 4</div>
+        <div class="Caja" id="Caja5">CAJA 5</div>
+        <div class="Caja" id="Caja6">CAJA 6</div>
+        <div class="Caja" id="Caja7">CAJA 7</div>
+        <div class="Caja" id="Caja8">CAJA 8</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1{
+    margin-top: 20;
+}
+
+.Parrafo{
+    color: gray;
+    line-height: 1.5em;
+}
+
+#Par1{
+    font-size: 36px;
+    color: brown;
+}
+
+#Par2{
+    font-size: 20px;
+    color: gray;
+}
+
+#Par3{
+    font-size: 20px;
+    color: blue;
+}
+
+img{
+    margin: auto;
+}
+
+    @ColorPrimario: rgb(53, 51, 51);
+    @ColorSecundario: rgb(243, 248, 243);
+
+input:checked + div#Contenedor{
+    background-color: @ColorPrimario;
+}
+
+body:has(input:checked){
+    background-color: @ColorPrimario;
+}
+
+div#Contenedor{
+    background-color: @ColorSecundario;
+}
+
+body{
+    background-color: @ColorSecundario;
+}
+
+div{
+    background-color: black;
+    border: 2px solid white;
+    h1{
+        color: aqua;
+    }
+    h2{
+        color: green;
+    }
+}

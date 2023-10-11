@@ -1,0 +1,149 @@
+*{
+    padding: 0px;
+	margin: 0px;
+    font-family: century Gothic;
+    box-sizing: border-box;
+}
+
+/* H E A D E R */
+header{
+    display: flex;
+    height: 10%;
+    width: 100%;
+    background-color:#133d85;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top:0;
+}
+
+.name{
+    padding-left: 25px;
+    /* TRANSICION */
+    transition: all 700ms ease;
+    font-size: 2em;
+}
+
+.name:hover{
+    cursor: pointer;
+    color: brown;
+    /* TRANSICION */
+    transition: all 700ms ease;
+    font-size: 3em;
+}
+
+nav a{
+    /* TRANSICION */
+    transition:  all 700ms ease;
+    font-weight: 600;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+nav a:hover{
+    /* TRANSICION */
+    transition:  all 700ms ease;
+    font-size: 30px;
+    color: black;
+}
+
+
+/* B O D Y */
+body{
+    width: 99vw;
+    height: 100vh;
+    background-color: gainsboro;
+    color: black;
+}
+
+.home{
+    display: flex;
+	flex-wrap: wrap;
+}
+
+.Contenedor{
+    flex: 1;
+}
+
+.Contenedor:first-child{
+	flex: 2;
+    padding: 25px;
+	margin: 20px;
+    background-color: white;
+}
+
+.Contenedor div{
+    background-color: white;
+    padding: 25px;
+	margin: 20px;
+}
+
+/* F O O T E R */
+.footer{
+    width: 99vw;
+    background-color: #244186;
+}
+
+.footer .Container-footer{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 80px;
+    padding: 15px 0px;
+}
+
+.footer .Container-footer .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .Container-footer .box figure img{
+    width: 150px;
+}
+
+.footer .Container-footer .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer .Container-footer .box p{
+    color: #efefef;
+    margin-bottom: 20px;
+}
+
+.footer .Container-footer .social-media {
+    text-align: center;
+}
+
+.footer .Container-footer .social-media a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px; 
+    color: white;
+    margin-right: 10px;
+    background-color: rgba(72, 78, 78, 0.568);
+    text-align: center;
+    transition: all 300ms ease;/* TRANSICION */
+}
+
+.footer .Container-footer .social-media a:hover{
+    color: black;
+}
+
+.footer .Container-footer2{
+    background-color: black;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+

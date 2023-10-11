@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.Caja{
+    width: calc((100% / 3) - 20px);
+    height: 100px;
+    background-color: brown;
+    border: 1px solid black;
+    float: left;
+    margin: 10px;
+    transition: all .7s ease;
+    font-size: 25px;
+}
+
+/*Moviles*/
+@media screen and (min-width: 400px) and (max-width: 900px){
+    #Caja1, #Caja2 {
+        width: calc((100% / 2) - 20px);
+    }
+    #Caja3{
+        clear: left;
+        width: calc(100% - 20px); 
+    }
+}
+
+/*Tablets*/
+@media screen and (max-width: 399px){
+    #Caja1, #Caja2, #Caja3{
+        clear: left;
+        width: calc(100% - 20px);
+    }
+}
