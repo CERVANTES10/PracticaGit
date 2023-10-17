@@ -1,0 +1,47 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Contenedor{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    background-color: green;
+    grid-template-columns: 155px 155px 155px;
+    grid-template-rows: 155px 155px 155px 155px;
+    justify-content: center;
+    align-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+    text-align: center;
+}
+
+.Contenedor #Caja14 #btnLimpiar{
+    margin-top: 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: gainsboro;
+    color: black;
+    border: 2px solid black;
+    font-size: 1em;
+}
+
+.Caja{
+    background-color: gainsboro;
+    border: 2px solid black;
+    color: black;
+    font-size: 80px;
+    line-height: 2em;
+    text-align: center;
+}
+
+#Caja11{
+    margin-top: 50px;
+    font-size: 2em;
+}
+
+#Caja10, #Caja12{
+    color: green;
+}

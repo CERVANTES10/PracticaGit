@@ -26,6 +26,8 @@
         <div id="Caja15"> </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
 
     window.onload=function(){
@@ -43,21 +45,21 @@
 
 
                 if(tablero[0] == tablero[1] && tablero[0] == tablero[2] && tablero[0]){
-                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                    Swal.fire("Gana "+ valor);
                 }else if(tablero[3] == tablero[4] && tablero[3] == tablero[5] && tablero[3]){
-                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                    Swal.fire("Gana "+ valor);
                 }else if(tablero[6] == tablero[7] && tablero[6] == tablero[8] && tablero[6]){
-                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                    Swal.fire("Gana "+ valor);
                 }else if(tablero[0] == tablero[3] && tablero[0] == tablero[6] && tablero[0]){
-                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                    Swal.fire("Gana "+ valor);
                 }else if(tablero[1] == tablero[4] && tablero[1] == tablero[7] && tablero[1]){
-                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                    Swal.fire("Gana "+ valor);
                 }else if(tablero[2] == tablero[5] && tablero[2] == tablero[8] && tablero[2]){
-                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                    Swal.fire("Gana "+ valor);
                 }else if(tablero[0] == tablero[4] && tablero[0] == tablero[8] && tablero[0]){
-                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                    Swal.fire("Gana "+ valor);
                 }else if(tablero[2] == tablero[4] && tablero[2] == tablero[6] && tablero[2]){
-                    document.getElementById("Caja11").innerText=("Gana "+valor);
+                    Swal.fire("Gana "+ valor);
                 }
                 
                 if(turno == 9){
@@ -65,7 +67,7 @@
                     for(const element of cajas){
                         console.log(element.textContent);
                         if(element.textContent != ""){
-                            document.getElementById("Caja11").innerText=("Empate");
+                            Swal.fire("EMPATE");
                         }
                     }
                 }
