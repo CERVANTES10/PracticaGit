@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Button id="btnXMLHTTPRequest">Imagen de Perrito</Button>
+    <div id="Respuesta"></div>
+
+    <script>
+        document.getElementById("btnXMLHTTPRequest").addEventListener("click", () => {
+
+            const xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === this.DONE) {
+                    console.log(this.responseText);
+                    let objetoJson = JSON.parse(this.response);
+                    console.log(objetoJson.value);
+                }
+            });
+
+            xhr.open("GET", "https://api.chucknorris.io/jokes/random");
+            xhr.send(data);
+
+            //XMLHTTPRequest
+            //Fetch
+            //Async/Await
+            //Libreria JQuery
+            //Libreria Axios
+        })
+
+    </script>
+</body>
+
+</html>
