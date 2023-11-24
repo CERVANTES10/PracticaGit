@@ -17,6 +17,10 @@ app.get('/users', (req, res) => {
       connection.query(
         "SELECT * FROM users",
         function(err, results, fields) {
+
+          res.json(results)
+
+          console.log(err);
           console.log(results); // results contains rows returned by server
           console.log(fields); // fields contains extra meta data about results, if available
         }

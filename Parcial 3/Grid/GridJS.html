@@ -13,9 +13,8 @@
         new gridjs.Grid({
             columns: ['nombre', 'login', 'Password'],
             server: {
-                url: 'https://swapi.dev/api/films/',
-                then: data => data.results.map(user => [user.nombre, user.login, user.password]
-                )
+                url: 'http://localhost:8083/users',
+                then: data => data.map(user => [user.Nombre, user.Login, user.Password_])
             }
         }).render(document.getElementById("wrapper"));
     </script>
