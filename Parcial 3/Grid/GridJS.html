@@ -13,8 +13,8 @@
         new gridjs.Grid({
             columns: ['nombre', 'login', 'Password'],
             server: {
-                url: 'http://localhost:8083/users',
-                then: data => data.map(user => [user.Nombre, user.Login, user.Password_])
+                url: 'http://localhost:8083/',
+                then: data => data.map(user => [user.FirstName, user.LastName, user.UserName])
             }
         }).render(document.getElementById("wrapper"));
     </script>
